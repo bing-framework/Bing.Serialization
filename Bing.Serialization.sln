@@ -41,7 +41,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{9C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CB1381C0-8429-4BEF-8A2D-4DCF715A2E9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Serialization.NewtonsoftJson", "src\Bing.Serialization.NewtonsoftJson\Bing.Serialization.NewtonsoftJson.csproj", "{239885FE-9648-425C-9475-7B41B272E796}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239885FE-9648-425C-9475-7B41B272E796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239885FE-9648-425C-9475-7B41B272E796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239885FE-9648-425C-9475-7B41B272E796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239885FE-9648-425C-9475-7B41B272E796}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -52,6 +64,7 @@ Global
 		{58E6832D-812D-4580-AFC5-FD359F9096C0} = {CB9D88B9-4F01-4439-9342-86D34C7D147F}
 		{A9DD19C8-5976-43CA-8463-B486B33BFE9F} = {CB9D88B9-4F01-4439-9342-86D34C7D147F}
 		{9CFB52A7-76CC-4505-A2D1-FE1CDC117419} = {CB9D88B9-4F01-4439-9342-86D34C7D147F}
+		{239885FE-9648-425C-9475-7B41B272E796} = {CB1381C0-8429-4BEF-8A2D-4DCF715A2E9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBD6C18B-1083-46A5-A5F0-0626E9B6C1B7}
