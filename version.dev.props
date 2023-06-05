@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Bing packages -->
+    <BingUtilsPackageVersion>1.5.0-preview-20230516-1</BingUtilsPackageVersion>
+  </PropertyGroup>
+</Project>

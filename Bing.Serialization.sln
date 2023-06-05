@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32929.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{CB9D88B9-4F01-4439-9342-86D34C7D147F}"
 EndProject
@@ -36,12 +36,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{9C
 		common.props = common.props
 		common.tests.props = common.tests.props
 		LICENSE = LICENSE
+		version.dev.props = version.dev.props
 		version.props = version.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CB1381C0-8429-4BEF-8A2D-4DCF715A2E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Serialization.NewtonsoftJson", "src\Bing.Serialization.NewtonsoftJson\Bing.Serialization.NewtonsoftJson.csproj", "{239885FE-9648-425C-9475-7B41B272E796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Serialization.NewtonsoftJson", "src\Bing.Serialization.NewtonsoftJson\Bing.Serialization.NewtonsoftJson.csproj", "{239885FE-9648-425C-9475-7B41B272E796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
