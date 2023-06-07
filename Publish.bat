@@ -1,7 +1,7 @@
 @echo off
 
 echo =======================================================================
-echo Bing.Abstractions
+echo Bing.Serialization
 echo =======================================================================
 
 ::create nuget_packages
@@ -19,8 +19,8 @@ echo.
 
 ::start to package all projects
 
-::Abstractions
-dotnet pack src/Bing.Abstractions -c Release -o nuget_packages
+::Serialization
+dotnet pack src/Bing.Serialization.NewtonsoftJson -c Release -o nuget_packages
 
 for /R "nuget_packages" %%s in (*symbols.nupkg) do (
     del %%s
