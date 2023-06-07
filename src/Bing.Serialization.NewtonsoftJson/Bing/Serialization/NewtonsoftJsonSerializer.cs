@@ -1,4 +1,5 @@
-﻿using Bing.Serialization.Newtonsoft;
+﻿using System.Text;
+using Bing.Serialization.Newtonsoft;
 
 namespace Bing.Serialization
 {
@@ -13,107 +14,133 @@ namespace Bing.Serialization
         private readonly JsonSerializerSettings _settings;
 
         /// <summary>
+        /// 启用NodaTime
+        /// </summary>
+        private readonly bool _enableNodaTime;
+
+        /// <summary>
+        /// 字符编码
+        /// </summary>
+        private readonly Encoding _encoding;
+
+        /// <summary>
         /// 初始化一个<see cref="NewtonsoftJsonHelper"/>类型的实例
         /// </summary>
         public NewtonsoftJsonSerializer()
         {
             _settings = NewtonsoftJsonHelper.GetDefaultSettings();
+            _enableNodaTime = false;
+            _encoding = NewtonsoftJsonHelper.GetDefaultEncoding();
         }
 
         /// <summary>
         /// 初始化一个<see cref="NewtonsoftJsonHelper"/>类型的实例
         /// </summary>
         /// <param name="settings">Json序列化设置</param>
-        public NewtonsoftJsonSerializer(JsonSerializerSettings settings)
+        /// <param name="enableNodaTime">启用NodaTime</param>
+        /// <param name="encoding">字符编码</param>
+        public NewtonsoftJsonSerializer(JsonSerializerSettings settings, bool enableNodaTime = false, Encoding encoding = null)
         {
             _settings = settings ?? NewtonsoftJsonHelper.GetDefaultSettings();
+            _enableNodaTime = enableNodaTime;
+            _encoding = encoding ?? NewtonsoftJsonHelper.GetDefaultEncoding();
         }
 
         /// <summary>
         /// 初始化一个<see cref="NewtonsoftJsonHelper"/>类型的实例
         /// </summary>
         /// <param name="settingsFactory">Json序列化设置工厂</param>
-        public NewtonsoftJsonSerializer(Func<JsonSerializerSettings> settingsFactory)
+        /// <param name="enableNodaTimeFactory">启用NodaTime工厂</param>
+        /// <param name="encodingFactory">字符编码工厂</param>
+        public NewtonsoftJsonSerializer(Func<JsonSerializerSettings> settingsFactory, Func<bool> enableNodaTimeFactory, Func<Encoding> encodingFactory)
         {
             _settings = settingsFactory is null ? NewtonsoftJsonHelper.GetDefaultSettings() : settingsFactory();
+            _enableNodaTime = enableNodaTimeFactory?.Invoke() ?? false;
+            _encoding = encodingFactory is null ? NewtonsoftJsonHelper.GetDefaultEncoding() : encodingFactory();
         }
 
         /// <inheritdoc />
-        public string Serialize<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings);
+        public string Serialize<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public Task<string> SerializeAsync<TValue>(TValue value) => NewtonsoftJsonHelper.ToJsonAsync(value, _settings);
+        public TValue Deserialize<TValue>(string data) => NewtonsoftJsonHelper.FromJson<TValue>(data, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public TValue Deserialize<TValue>(string data) => NewtonsoftJsonHelper.FromJson<TValue>(data, _settings);
+        public object Deserialize(Type type, string data) => NewtonsoftJsonHelper.FromJson(type, data, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public object Deserialize(Type type, string data) => NewtonsoftJsonHelper.FromJson(type, data, _settings);
+        public Task<string> SerializeAsync<TValue>(TValue value) => NewtonsoftJsonHelper.ToJsonAsync(value, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public Task<TValue> DeserializeAsync<TValue>(string data) => NewtonsoftJsonHelper.FromJsonAsync<TValue>(data, _settings);
+        public Task<TValue> DeserializeAsync<TValue>(string data) => NewtonsoftJsonHelper.FromJsonAsync<TValue>(data, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public Task<object> DeserializeAsync(Type type, string data) => NewtonsoftJsonHelper.FromJsonAsync(type, data, _settings);
+        public Task<object> DeserializeAsync(Type type, string data) => NewtonsoftJsonHelper.FromJsonAsync(type, data, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public byte[] ToBytes<TValue>(TValue value) => NewtonsoftJsonHelper.ToBytes(value, _settings);
+        public byte[] ToBytes<TValue>(TValue value) => NewtonsoftJsonHelper.ToBytes(value, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public byte[] ToBytes(Type type, object value) => NewtonsoftJsonHelper.ToBytes(value, _settings);
+        public byte[] ToBytes(Type type, object value) => NewtonsoftJsonHelper.ToBytes(value, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public TValue FromBytes<TValue>(byte[] bytes) => NewtonsoftJsonHelper.FromBytes<TValue>(bytes, _settings);
+        public TValue FromBytes<TValue>(byte[] bytes) => NewtonsoftJsonHelper.FromBytes<TValue>(bytes, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public object FromBytes(Type type, byte[] bytes) => NewtonsoftJsonHelper.FromBytes(type, bytes, _settings);
+        public object FromBytes(Type type, byte[] bytes) => NewtonsoftJsonHelper.FromBytes(type, bytes, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public MemoryStream ToStream<TValue>(TValue value) => NewtonsoftJsonHelper.ToStream(value, _settings);
+        public TValue FromText<TValue>(string text) => NewtonsoftJsonHelper.FromJson<TValue>(text, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public MemoryStream ToStream(Type type, object value) => NewtonsoftJsonHelper.ToStream(value, _settings);
+        public object FromText(Type type, string text) => NewtonsoftJsonHelper.FromJson(type, text, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public TValue Stream<TValue>(Stream stream) => NewtonsoftJsonHelper.FromStream<TValue>(stream);
+        public string ToText<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public object FromStream(Type type, Stream stream) => NewtonsoftJsonHelper.FromStream(type, stream);
+        public string ToText(Type type, object value) => NewtonsoftJsonHelper.ToJson(value, _settings, _enableNodaTime);
 
         /// <inheritdoc />
-        public Task<MemoryStream> ToStreamAsync<TValue>(TValue value, CancellationToken cancellationToken = default) => NewtonsoftJsonHelper.ToStreamAsync(value, _settings, cancellationToken: cancellationToken);
+        public void Pack<TValue>(TValue value, Stream stream) => NewtonsoftJsonHelper.Pack(value, stream, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public Task<MemoryStream> ToStreamAsync(Type type, object value, CancellationToken cancellationToken = default) => NewtonsoftJsonHelper.ToStreamAsync(value, _settings, cancellationToken: cancellationToken);
+        public void Pack(Type type, object value, Stream stream) => NewtonsoftJsonHelper.Pack(value, stream, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public Task<TValue> FromStreamAsync<TValue>(Stream stream, CancellationToken cancellationToken = default) => NewtonsoftJsonHelper.FromStreamAsync<TValue>(stream, _settings, cancellationToken: cancellationToken);
+        public MemoryStream ToStream<TValue>(TValue value) => NewtonsoftJsonHelper.ToStream(value, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public Task<object> FromStreamAsync(Type type, Stream stream, CancellationToken cancellationToken = default) => NewtonsoftJsonHelper.FromStreamAsync(type, stream, _settings, cancellationToken: cancellationToken);
+        public MemoryStream ToStream(Type type, object value) => NewtonsoftJsonHelper.ToStream(value, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public TValue FromText<TValue>(string text) => NewtonsoftJsonHelper.FromJson<TValue>(text, _settings);
+        public TValue FromStream<TValue>(Stream stream) => NewtonsoftJsonHelper.FromStream<TValue>(stream, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public object FromText(Type type, string text) => NewtonsoftJsonHelper.FromJson(type, text, _settings);
+        public object FromStream(Type type, Stream stream) => NewtonsoftJsonHelper.FromStream(type, stream, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public string ToText<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings);
+        public Task PackAsync<TValue>(TValue value, Stream stream, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.PackAsync(value, stream, _settings, _enableNodaTime, _encoding, cancellationToken);
 
         /// <inheritdoc />
-        public string ToText(Type type, object value) => NewtonsoftJsonHelper.ToJson(value, _settings);
+        public Task PackAsync(Type type, object value, Stream stream, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.PackAsync(value, stream, _settings, _enableNodaTime, _encoding, cancellationToken);
 
         /// <inheritdoc />
-        public TValue FromJson<TValue>(string json) => NewtonsoftJsonHelper.FromJson<TValue>(json, _settings);
+        public Task<MemoryStream> ToStreamAsync<TValue>(TValue value, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.ToStreamAsync(value, _settings, _enableNodaTime, _encoding, cancellationToken);
 
         /// <inheritdoc />
-        public object FromJson(Type type, string json) => NewtonsoftJsonHelper.FromJson(type, json, _settings);
+        public Task<MemoryStream> ToStreamAsync(Type type, object value, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.ToStreamAsync(value, _settings, _enableNodaTime, _encoding, cancellationToken);
 
         /// <inheritdoc />
-        public string ToJson<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings);
+        public Task<TValue> FromStreamAsync<TValue>(Stream stream, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.FromStreamAsync<TValue>(stream, _settings, _enableNodaTime, _encoding, cancellationToken);
 
         /// <inheritdoc />
-        public string ToJson(Type type, object value) => NewtonsoftJsonHelper.ToJson(value, _settings);
+        public Task<object> FromStreamAsync(Type type, Stream stream, CancellationToken cancellationToken = default) =>
+            NewtonsoftJsonHelper.FromStreamAsync(type, stream, _settings, _enableNodaTime, _encoding, cancellationToken);
     }
 }

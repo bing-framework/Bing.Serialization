@@ -6,7 +6,7 @@ namespace Bing.Serialization.Newtonsoft;
 public static partial class NewtonsoftJsonHelper
 {
     /// <summary>
-    /// 将对象转换成 <see cref="Stream"/>
+    /// 将对象转换成 <see cref="MemoryStream"/>
     /// </summary>
     /// <param name="value">对象</param>
     /// <param name="settings">Json序列化设置</param>
@@ -20,7 +20,7 @@ public static partial class NewtonsoftJsonHelper
     }
 
     /// <summary>
-    /// 将对象转换成 <see cref="Stream"/>
+    /// 将对象转换成 <see cref="MemoryStream"/>
     /// </summary>
     /// <param name="value">对象</param>
     /// <param name="settings">Json序列化设置</param>

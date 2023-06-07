@@ -21,7 +21,6 @@ public static partial class NewtonsoftJsonHelper
     /// <param name="settings">Json序列化设置</param>
     /// <param name="enableNodaTime">启用NodaTime</param>
     /// <param name="cancellationToken">取消令牌</param>
-    /// <returns></returns>
     public static async Task<string> ToJsonAsync(object value, JsonSerializerSettings settings = null, bool enableNodaTime = false, CancellationToken cancellationToken = default) =>
         value is null
             ? string.Empty
