@@ -4,5 +4,838 @@
         <name>Bing.Serialization.NewtonsoftJson</name>
     </assembly>
     <members>
+        <member name="T:Bing.Serialization.NewtonsoftJsonSerializer">
+            <summary>
+            Newtonsoft Json 序列化器
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.NewtonsoftJsonSerializer._settings">
+            <summary>
+            Json序列化设置
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.NewtonsoftJsonSerializer._enableNodaTime">
+            <summary>
+            启用NodaTime
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.NewtonsoftJsonSerializer._encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.#ctor">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.#ctor(Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper"/>类型的实例
+            </summary>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.#ctor(System.Func{Newtonsoft.Json.JsonSerializerSettings},System.Func{System.Boolean},System.Func{System.Text.Encoding})">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper"/>类型的实例
+            </summary>
+            <param name="settingsFactory">Json序列化设置工厂</param>
+            <param name="enableNodaTimeFactory">启用NodaTime工厂</param>
+            <param name="encodingFactory">字符编码工厂</param>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.Serialize``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.Deserialize``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.Deserialize(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.SerializeAsync``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.DeserializeAsync``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.DeserializeAsync(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToBytes``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToBytes(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromBytes``1(System.Byte[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromBytes(System.Type,System.Byte[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToText``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToText(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromText``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromText(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.Pack``1(``0,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.Pack(System.Type,System.Object,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToStream``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToStream(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromStream``1(System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromStream(System.Type,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.PackAsync``1(``0,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.PackAsync(System.Type,System.Object,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToStreamAsync``1(``0,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.ToStreamAsync(System.Type,System.Object,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromStreamAsync``1(System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializer.FromStreamAsync(System.Type,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.NewtonsoftJsonSerializerExtensions">
+            <summary>
+            Newtonsoft Json 序列化器扩展
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializerExtensions.UseNewtonsoftJson(Bing.Serialization.IJsonSerializerConfigureEntry)">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.NewtonsoftJsonSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializerExtensions.UseNewtonsoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.NewtonsoftJsonSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="options">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializerExtensions.UseNewtonsoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,System.Func{Newtonsoft.Json.JsonSerializerSettings},System.Func{System.Boolean},System.Func{System.Text.Encoding})">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.NewtonsoftJsonSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="optionsFactory">Json序列化设置工厂</param>
+            <param name="enableNodaTimeFactory">启用NodaTime工厂</param>
+            <param name="encodingFactory">字符编码工厂</param>
+        </member>
+        <member name="M:Bing.Serialization.NewtonsoftJsonSerializerExtensions.UseNewtonsoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,System.Func{Bing.Serialization.NewtonsoftJsonSerializer})">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.NewtonsoftJsonSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="serializerFactory">Json序列化器工厂</param>
+        </member>
+        <member name="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions">
+            <summary>
+            Newtonsoft.Json 扩展
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonBytes``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonBytes(System.Byte[],System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonBytesAsync``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonBytesAsync(System.Byte[],System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.NewtonsoftPackTo(System.Object,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.NewtonsoftPackToAsync(System.Object,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftBytes(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】将对象转换为字节数组
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftBytesAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】将对象转换为字节数组
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftJson(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            【Newtonsoft.Json】将对象转换为Json字符串
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftJsonAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】将对象转换为Json字符串
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftStream(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="value">对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.ToNewtonsoftStreamAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="value">对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftStream``1(System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftStream(System.IO.Stream,System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftStreamAsync``1(System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftStreamAsync(System.IO.Stream,System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.NewtonsoftPackBy(System.IO.Stream,System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            【Newtonsoft.Json】装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.NewtonsoftPackByAsync(System.IO.Stream,System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJson``1(System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJson``1(System.String,``0,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">json字符串</param>
+            <param name="targetObject">目标对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJson(System.String,System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonAsync``1(System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonAsync``1(System.String,``0,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="targetObject">目标对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonExtensions.FromNewtonsoftJsonAsync(System.String,System.Type,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            【Newtonsoft.Json】从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper">
+            <summary>
+            基于Newtonsoft.Json实现的Json帮助类
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromBytes``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromBytes(System.Type,System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromBytesAsync``1(System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromBytesAsync(System.Type,System.Byte[],Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToBytes(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToBytesAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="T:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager">
+            <summary>
+            Newtonsoft.Json 管理器
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager._encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager._settings">
+            <summary>
+            Json序列化设置
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager._settingsWithNodaTime">
+            <summary>
+            Json序列化设置 - 基于NodaTime
+            </summary>
+        </member>
+        <member name="P:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager.DefaultEncoding">
+            <summary>
+            默认字符编码
+            </summary>
+        </member>
+        <member name="P:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager.DefaultSettings">
+            <summary>
+            默认Json序列化设置
+            </summary>
+        </member>
+        <member name="P:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Manager.DefaultSettingsWithNodaTime">
+            <summary>
+            默认Json序列化设置 - 基于NodaTime
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.GetDefaultEncoding">
+            <summary>
+            获取默认字符编码
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.SetDefaultEncoding(System.Text.Encoding)">
+            <summary>
+            设置默认字符编码
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.GetDefaultSettings">
+            <summary>
+            获取默认Json序列化设置
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.SetDefaultSettings(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            设置默Json序列化设置
+            </summary>
+            <param name="settings">Json序列化设置</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.GetDefaultSettingsWithNodaTime">
+            <summary>
+            获取默认Json序列化设置 - 基于NodaTime
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.SetDefaultSettingsWithNodaTime(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            设置默认Json序列化设置 - 基于NodaTime
+            </summary>
+            <param name="settings">Json序列化设置</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToSettings(Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            转换Json序列化设置
+            </summary>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.GetEncoding(System.Text.Encoding)">
+            <summary>
+            获取字符编码
+            </summary>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.CastToBytes(System.IO.Stream)">
+            <summary>
+            转换为字节数组
+            </summary>
+            <param name="stream">流</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.CastToBytesAsync(System.IO.Stream)">
+            <summary>
+            转换为字节数组
+            </summary>
+            <param name="stream">流</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromStream``1(System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromStream(System.Type,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromStreamAsync``1(System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromStreamAsync(System.Type,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.Pack(System.Object,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.PackAsync(System.Object,System.IO.Stream,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            装箱
+            </summary>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToStream(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToStreamAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="encoding">字符编码</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJson``1(System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJson``1(System.String,``0,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">json字符串</param>
+            <param name="targetObject">目标对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJson(System.Type,System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJsonAsync``1(System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJsonAsync``1(System.String,``0,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="targetObject">目标对象</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.FromJsonAsync(System.Type,System.String,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Object,Newtonsoft.Json.JsonSerializerSettings,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <param name="value">值</param>
+            <param name="settings">Json序列化设置</param>
+            <param name="enableNodaTime">启用NodaTime</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.XmlNode)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.XmlNode,Newtonsoft.Json.Formatting)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.XmlNode,Newtonsoft.Json.Formatting,System.Boolean)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="omitRootObject">是否省略根对象</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.XmlNode,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.XmlNode,Newtonsoft.Json.Formatting,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.XmlNode,Newtonsoft.Json.Formatting,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.XmlNode"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="omitRootObject">是否省略根对象</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsXmlNode(System.String)">
+            <summary>
+            将Json字符串转换为 <see cref="T:System.Xml.XmlNode"/> 对象
+            </summary>
+            <param name="json">Json字符串</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsXmlNodeAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            将Json字符串转换为 <see cref="T:System.Xml.XmlNode"/> 对象
+            </summary>
+            <param name="json">Json字符串</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.Linq.XObject)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJson(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting,System.Boolean)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="omitRootObject">是否省略根对象</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.Linq.XObject,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToJsonAsync(System.Xml.Linq.XObject,Newtonsoft.Json.Formatting,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            将 <see cref="T:System.Xml.Linq.XObject"/> 对象转换为Json字符串
+            </summary>
+            <param name="node">XML节点</param>
+            <param name="formatting">Json格式化</param>
+            <param name="omitRootObject">是否省略根对象</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToXNode(System.String)">
+            <summary>
+            将Json字符串转换为 <see cref="T:System.Xml.Linq.XObject"/> 对象
+            </summary>
+            <param name="json">Json字符串</param>
+        </member>
+        <member name="M:Bing.Serialization.Newtonsoft.NewtonsoftJsonHelper.ToXNodeAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            将Json字符串转换为 <see cref="T:System.Xml.Linq.XObject"/> 对象
+            </summary>
+            <param name="json">Json字符串</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
     </members>
 </doc>

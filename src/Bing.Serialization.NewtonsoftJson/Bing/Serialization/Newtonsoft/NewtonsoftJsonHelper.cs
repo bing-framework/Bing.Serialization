@@ -10,7 +10,7 @@ namespace Bing.Serialization.Newtonsoft;
 public static partial class NewtonsoftJsonHelper
 {
     /// <summary>
-    /// Newtonsoft Json 管理器
+    /// Newtonsoft.Json 管理器
     /// </summary>
     private static class Manager
     {

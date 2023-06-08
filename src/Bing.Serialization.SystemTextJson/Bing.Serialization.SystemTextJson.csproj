@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>Bing.Serialization.SystemTextJson</AssemblyName>
+		<PackageId>Bing.Serialization.SystemTextJson</PackageId>
+		<Description>Bing.Serialization.SystemTextJson是Bing应用框架的基于 Microsoft System.Text.Json 实现的序列化类库。</Description>
+	</PropertyGroup>
+
+	<Import Project="..\..\common.props" />
+
+	<ItemGroup>
+		<PackageReference Include="Bing.Utils" Version="$(BingUtilsPackageVersion)" />
+		<PackageReference Include="Bing.Abstractions" Version="$(BingAbstractionsPackageVersion)" />
+		<PackageReference Include="System.Text.Json" Version="7.0.2" />
+	</ItemGroup>
+
+</Project>

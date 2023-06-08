@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<AssemblyName>Bing.Serialization.NewtonsoftJson</AssemblyName>
 		<PackageId>Bing.Serialization.NewtonsoftJson</PackageId>
@@ -10,7 +9,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Bing.Utils" Version="$(BingUtilsPackageVersion)" />
-		<PackageReference Include="Bing.Abstractions" Version="1.0.0-preview-20230607-1" />
+		<PackageReference Include="Bing.Abstractions" Version="$(BingAbstractionsPackageVersion)" />
 	</ItemGroup>
 
 	<ItemGroup>

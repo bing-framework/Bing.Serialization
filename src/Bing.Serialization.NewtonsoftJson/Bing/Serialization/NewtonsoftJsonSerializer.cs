@@ -90,16 +90,16 @@ namespace Bing.Serialization
         public object FromBytes(Type type, byte[] bytes) => NewtonsoftJsonHelper.FromBytes(type, bytes, _settings, _enableNodaTime, _encoding);
 
         /// <inheritdoc />
-        public TValue FromText<TValue>(string text) => NewtonsoftJsonHelper.FromJson<TValue>(text, _settings, _enableNodaTime);
-
-        /// <inheritdoc />
-        public object FromText(Type type, string text) => NewtonsoftJsonHelper.FromJson(type, text, _settings, _enableNodaTime);
-
-        /// <inheritdoc />
         public string ToText<TValue>(TValue value) => NewtonsoftJsonHelper.ToJson(value, _settings, _enableNodaTime);
 
         /// <inheritdoc />
         public string ToText(Type type, object value) => NewtonsoftJsonHelper.ToJson(value, _settings, _enableNodaTime);
+
+        /// <inheritdoc />
+        public TValue FromText<TValue>(string text) => NewtonsoftJsonHelper.FromJson<TValue>(text, _settings, _enableNodaTime);
+
+        /// <inheritdoc />
+        public object FromText(Type type, string text) => NewtonsoftJsonHelper.FromJson(type, text, _settings, _enableNodaTime);
 
         /// <inheritdoc />
         public void Pack<TValue>(TValue value, Stream stream) => NewtonsoftJsonHelper.Pack(value, stream, _settings, _enableNodaTime, _encoding);

@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bing.Serialization.SystemTextJson</name>
+    </assembly>
+    <members>
+        <member name="T:Bing.Serialization.MicrosoftJsonObjectSerializer">
+            <summary>
+            Microsoft System.Text.Json 序列化器
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.MicrosoftJsonObjectSerializer._options">
+            <summary>
+            Json序列化选项设置
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.#ctor">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>类型的实例
+            </summary>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.#ctor(System.Func{System.Text.Json.JsonSerializerOptions})">
+            <summary>
+            初始化一个<see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>类型的实例
+            </summary>
+            <param name="optionsFactory">Json序列化选项设置工厂</param>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.Serialize``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.Deserialize``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.Deserialize(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.SerializeAsync``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.DeserializeAsync``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.DeserializeAsync(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToBytes``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToBytes(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromBytes``1(System.Byte[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromBytes(System.Type,System.Byte[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToText``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToText(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromText``1(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromText(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.Pack``1(``0,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.Pack(System.Type,System.Object,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToStream``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToStream(System.Type,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromStream``1(System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromStream(System.Type,System.IO.Stream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.PackAsync``1(``0,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.PackAsync(System.Type,System.Object,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToStreamAsync``1(``0,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.ToStreamAsync(System.Type,System.Object,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromStreamAsync``1(System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializer.FromStreamAsync(System.Type,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.MicrosoftJsonObjectSerializerExtensions">
+            <summary>
+            System.Text.Json (MicrosoftJson) 序列化器扩展
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializerExtensions.UseMicrosoftJson(Bing.Serialization.IJsonSerializerConfigureEntry)">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializerExtensions.UseMicrosoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="options">Json序列化设置</param>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializerExtensions.UseMicrosoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,System.Func{System.Text.Json.JsonSerializerOptions})">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="optionsFactory">Json序列化设置工厂</param>
+        </member>
+        <member name="M:Bing.Serialization.MicrosoftJsonObjectSerializerExtensions.UseMicrosoftJson(Bing.Serialization.IJsonSerializerConfigureEntry,System.Func{Bing.Serialization.MicrosoftJsonObjectSerializer})">
+            <summary>
+            应用 <see cref="T:Bing.Serialization.MicrosoftJsonObjectSerializer"/>
+            </summary>
+            <param name="entry">Json序列化器配置入口</param>
+            <param name="serializerFactory">Json序列化器工厂</param>
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.SystemTextJsonHelper">
+            <summary>
+            基于 Microsoft System.Text.Json 实现的Json帮助类
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytes``1(System.Byte[],System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytes(System.Type,System.Byte[],System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytes``1(System.ReadOnlySpan{System.Byte},System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytes(System.Type,System.ReadOnlySpan{System.Byte},System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytesAsync``1(System.Byte[],System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从字节数组转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromBytesAsync(System.Type,System.Byte[],System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从字节数组转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="bytes">字节数组</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToBytes``1(``0,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToBytes(System.Type,System.Object,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <param name="type">类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToBytesAsync``1(``0,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToBytesAsync(System.Type,System.Object,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为字节数组
+            </summary>
+            <param name="type">类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.Manager">
+            <summary>
+            Microsoft System.Text.Json 管理器
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.Manager._options">
+            <summary>
+            Json序列化选项设置
+            </summary>
+        </member>
+        <member name="P:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.Manager.DefaultOptions">
+            <summary>
+            默认Json序列化选项设置
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.GetDefaultOptions">
+            <summary>
+            获取默认Json序列化选项设置
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.SetDefaultOptions(System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            设置默认Json序列化选项设置
+            </summary>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToOptions(System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            转换Json序列化选项设置
+            </summary>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromStream``1(System.IO.Stream,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromStream(System.Type,System.IO.Stream,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromStreamAsync``1(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromStreamAsync(System.Type,System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从 <see cref="T:System.IO.Stream"/> 转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.Pack``1(``0,System.IO.Stream,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            装箱
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.Pack(System.Type,System.Object,System.IO.Stream,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            装箱
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.PackAsync``1(``0,System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            装箱
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.PackAsync(System.Type,System.Object,System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            装箱
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="stream">流</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToStream``1(``0,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToStream(System.Type,System.Object,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToStreamAsync``1(``0,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToStreamAsync(System.Type,System.Object,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换成 <see cref="T:System.IO.MemoryStream"/>
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromJson``1(System.String,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromJson(System.Type,System.String,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromJsonAsync``1(System.String,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从Json字符串转换成指定 <typeparamref name="TValue"/> 类型的对象
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="json">Json字符串</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.FromJsonAsync(System.Type,System.String,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            从Json字符串转换成指定类型的对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="json">Json字符串</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToJson``1(``0,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToJson(System.Type,System.Object,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToJsonAsync``1(``0,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <typeparam name="TValue">对象类型</typeparam>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.SystemTextJsonHelper.ToJsonAsync(System.Type,System.Object,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)">
+            <summary>
+            将对象转换为Json字符串
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="value">值</param>
+            <param name="options">Json序列化选项设置</param>
+            <param name="cancellationToken">取消令牌</param>
+        </member>
+    </members>
+</doc>
