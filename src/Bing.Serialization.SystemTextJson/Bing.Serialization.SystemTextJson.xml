@@ -163,6 +163,70 @@
         <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.Boolean},System.Text.Json.JsonSerializerOptions)">
             <inheritdoc />
         </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.Constant">
+            <summary>
+            常量
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.SystemTextJson.JsonConverters.Constant.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.SystemTextJson.JsonConverters.Constant.TimeFormat">
+            <summary>
+            时间格式
+            </summary>
+        </member>
+        <member name="F:Bing.Serialization.SystemTextJson.JsonConverters.Constant.DateTimeFormat">
+            <summary>
+            日期时间格式
+            </summary>
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyJsonConverter">
+            <summary>
+            <see cref="T:System.DateOnly"/> 类型Json转换(用于将字符串类型的日期转化成后端可识别的 <see cref="T:System.DateOnly"/> 类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.DateOnly,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyNullableJsonConverter">
+            <summary>
+            可空 <see cref="T:System.DateOnly"/> 类型Json转换(用于将字符串类型的日期转化成后端可识别的 <see cref="T:System.DateOnly"/> 类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyNullableJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DateOnlyNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.DateOnly},System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.DecimalJsonConverter">
+            <summary>
+            Decimal数据类型Json转换(用于将字符串类型的数字转化成后端可识别的decimal类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DecimalJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DecimalJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Decimal,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.DecimalNullableJsonConverter">
+            <summary>
+            可空Decimal数据类型Json转换(用于将字符串类型的数字转化成后端可识别的decimal类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DecimalNullableJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.DecimalNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.Decimal},System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
         <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.IntJsonConverter">
             <summary>
             Int数据类型Json转换(用于将字符串类型的数字转化成后端可识别的int类型)
