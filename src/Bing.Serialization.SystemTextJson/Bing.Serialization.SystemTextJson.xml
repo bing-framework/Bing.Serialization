@@ -145,13 +145,6 @@
             <summary>
             <see cref="T:System.Boolean"/> 类型Json转换(用于将字符串类型 <see langword="true"/> 或 <see langword="false"/> 转化成后端可识别的 <see cref="T:System.Boolean"/> 类型)
             </summary>
-            <example>
-             <code>
-            <![CDATA[
-             builder.Services.AddControllers().AddJsonOptions(c => c.JsonSerializerOptions.Converters.Add(new BoolJsonConverter()));
-             ]]>
-             </code>
-            </example>
         </member>
         <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
             <inheritdoc />
@@ -163,18 +156,33 @@
             <summary>
             可空 <see cref="T:System.Boolean"/> 类型Json转换(用于将字符串类型 <see langword="true"/> 或 <see langword="false"/> 转化成后端可识别的 <see cref="T:System.Boolean"/> 类型)
             </summary>
-            <example>
-             <code>
-            <![CDATA[
-             builder.Services.AddControllers().AddJsonOptions(c => c.JsonSerializerOptions.Converters.Add(new BoolNullableJsonConverter()));
-             ]]>
-             </code>
-            </example>
         </member>
         <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
             <inheritdoc />
         </member>
         <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.Boolean},System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.IntJsonConverter">
+            <summary>
+            Int数据类型Json转换(用于将字符串类型的数字转化成后端可识别的int类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.IntJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.IntJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Int32,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.IntNullableJsonConverter">
+            <summary>
+            可空Int数据类型Json转换(用于将字符串类型的数字转化成后端可识别的int类型)
+            </summary>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.IntNullableJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.IntNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.Int32},System.Text.Json.JsonSerializerOptions)">
             <inheritdoc />
         </member>
         <member name="T:Bing.Serialization.SystemTextJson.SystemTextJsonHelper">

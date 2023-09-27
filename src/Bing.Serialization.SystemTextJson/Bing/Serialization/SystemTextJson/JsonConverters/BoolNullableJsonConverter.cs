@@ -5,14 +5,7 @@ namespace Bing.Serialization.SystemTextJson.JsonConverters;
 /// <summary>
 /// 可空 <see cref="bool"/> 类型Json转换(用于将字符串类型 <see langword="true"/> 或 <see langword="false"/> 转化成后端可识别的 <see cref="bool"/> 类型)
 /// </summary>
-/// <example>
-///  <code>
-/// <![CDATA[
-///  builder.Services.AddControllers().AddJsonOptions(c => c.JsonSerializerOptions.Converters.Add(new BoolNullableJsonConverter()));
-///  ]]>
-///  </code>
-/// </example>
-public class BoolNullableJsonConverter : JsonConverter<bool?>
+public sealed class BoolNullableJsonConverter : JsonConverter<bool?>
 {
     /// <inheritdoc />
     public override bool? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
