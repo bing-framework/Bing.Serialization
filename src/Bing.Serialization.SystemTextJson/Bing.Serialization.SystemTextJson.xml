@@ -141,6 +141,42 @@
             <param name="entry">Json序列化器配置入口</param>
             <param name="serializerFactory">Json序列化器工厂</param>
         </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.BoolJsonConverter">
+            <summary>
+            <see cref="T:System.Boolean"/> 类型Json转换(用于将字符串类型 <see langword="true"/> 或 <see langword="false"/> 转化成后端可识别的 <see cref="T:System.Boolean"/> 类型)
+            </summary>
+            <example>
+             <code>
+            <![CDATA[
+             builder.Services.AddControllers().AddJsonOptions(c => c.JsonSerializerOptions.Converters.Add(new BoolJsonConverter()));
+             ]]>
+             </code>
+            </example>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Boolean,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter">
+            <summary>
+            可空 <see cref="T:System.Boolean"/> 类型Json转换(用于将字符串类型 <see langword="true"/> 或 <see langword="false"/> 转化成后端可识别的 <see cref="T:System.Boolean"/> 类型)
+            </summary>
+            <example>
+             <code>
+            <![CDATA[
+             builder.Services.AddControllers().AddJsonOptions(c => c.JsonSerializerOptions.Converters.Add(new BoolNullableJsonConverter()));
+             ]]>
+             </code>
+            </example>
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Bing.Serialization.SystemTextJson.JsonConverters.BoolNullableJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{System.Boolean},System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc />
+        </member>
         <member name="T:Bing.Serialization.SystemTextJson.SystemTextJsonHelper">
             <summary>
             基于 Microsoft System.Text.Json 实现的Json帮助类
