@@ -10,7 +10,7 @@
 	<ItemGroup>
 		<PackageReference Include="Bing.Utils" Version="$(BingUtilsPackageVersion)" />
 		<PackageReference Include="Bing.Abstractions" Version="$(BingAbstractionsPackageVersion)" />
-		<PackageReference Include="System.Text.Json" Version="7.0.2" />
+		<PackageReference Include="System.Text.Json" Version="6.0.0" />
 	</ItemGroup>
 
 </Project>

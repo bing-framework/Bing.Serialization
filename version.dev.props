@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <!-- Bing packages -->
-    <BingUtilsPackageVersion>1.5.0-preview-20230613-1</BingUtilsPackageVersion>
+    <BingUtilsPackageVersion>1.5.0-preview-20231115-1</BingUtilsPackageVersion>
     <BingAbstractionsPackageVersion>1.0.0-preview-20230607-1</BingAbstractionsPackageVersion>
   </PropertyGroup>
 </Project>
