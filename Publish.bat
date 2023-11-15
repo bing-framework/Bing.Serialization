@@ -21,6 +21,7 @@ echo.
 
 ::Serialization
 dotnet pack src/Bing.Serialization.NewtonsoftJson -c Release -o nuget_packages
+dotnet pack src/Bing.Serialization.SystemTextJson -c Release -o nuget_packages
 
 for /R "nuget_packages" %%s in (*symbols.nupkg) do (
     del %%s
